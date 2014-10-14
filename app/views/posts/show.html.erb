@@ -3,7 +3,9 @@
 
 <h2><%= link_to_unless_current @post.title, @post %></h2>
 
-<%= simple_format @post.body %>
+
+<p> Submitted <%= time_ago_in_words(@post.created_at) %> ago</p>
+<p> <%= @post.body %> </p>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

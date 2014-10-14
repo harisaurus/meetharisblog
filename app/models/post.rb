@@ -1,5 +1,11 @@
 class Post < ActiveRecord::Base
 
-	validates_presence_of :title, :body
-	validates_uniqueness_of :title
+	# validates_presence_of :title, :body
+	# validates_uniqueness_of :title
+
+	has_many :comments
+
+	validates :title, presence: true, length: {minimum: 5}
+	validates :body, presence: true
+
 end
