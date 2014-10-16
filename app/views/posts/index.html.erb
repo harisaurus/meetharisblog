@@ -1,27 +1,51 @@
-<h1>Listing posts</h1>
+<div class="header-aside">
+  <svg version="1.1" id="hmbranding-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 900 900" enable-background="new 0 0 900 900" xml:space="preserve">
+    <polyline class="hm-svg" stroke-miterlimit="10" points="15.5,207.9 15.5,424.5 335.5,424.5 
+      335.5,207.9 "/>
+    <polyline class="hm-svg" stroke-miterlimit="10" points="15.5,699.8 15.5,487 335.5,487 
+      335.5,699.8 "/>
+    <polyline class="hm-svg" stroke-miterlimit="10" points="400.1,699.8 400.1,316.2 675.7,699.8 "/>
+    <line class="hm-svg" stroke-miterlimit="10" x1="400.1" y1="207.9" x2="754.5" y2="699.8"/>
+    <polyline class="hm-svg" stroke-miterlimit="10" points="885.3,699.8 885.3,207.9 643.5,545.7 "/>
+  </svg>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="home-content">
+  
+  <div class="posts-list">
+  <% @posts.each do |post| %>
+    <%= link_to post do %>
+    <div class="posts-list-item">
+      <p class="u-lowerEmphasis u-uppercase u-spacer24">Created <%= time_ago_in_words(post.created_at) %> ago</p>
+      <h2><%= post.title %></h2>
+    </div>
     <% end %>
-  </tbody>
-</table>
+  <% end %>
+  </div>
 
-<br>
+<!--   <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-<%= link_to 'New Post', new_post_path %>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.title %></td>
+          <td><%= post.body %></td>
+          <td><%= link_to 'Show', post %></td>
+          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+ -->
+
+  <%= link_to 'New Post', new_post_path %>
+</div>

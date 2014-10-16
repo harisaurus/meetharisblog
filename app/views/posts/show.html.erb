@@ -4,8 +4,8 @@
 <h2><%= link_to_unless_current @post.title, @post %></h2>
 
 
-<p> Submitted <%= time_ago_in_words(@post.created_at) %> ago</p>
-<p> <%= @post.body %> </p>
+<p> Created <%= time_ago_in_words(@post.created_at) %> ago</p>
+<%= simple_format @post.body %>
 
 <div class="comments-holder">
 	<h2><%= @post.comments.count %> Comments</h2>
