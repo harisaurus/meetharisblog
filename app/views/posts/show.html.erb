@@ -1,20 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="show-post">
+  <p id="notice"><%= notice %></p>
+  
+  <div class="post-block">
+    <h3 class="u-spacer10"> Created <%= time_ago_in_words(@post.created_at) %> ago</h3 class="u-spacer10">
+    <h1 class="u-spacer50 "><%= link_to_unless_current @post.title, @post %></h1>
+    <%= markdown @post.body %>
+  </div>
 
+  <!-- <div class="comments-holder">
+  	<h2><%= @post.comments.count %> Comments</h2>
+  	<%= render @post.comments %>
 
-<h2><%= link_to_unless_current @post.title, @post %></h2>
+  	<h3>Add a comment:</h3>
+  	<%= render "comments/form" %>
+  </div> -->
 
-
-<p> Created <%= time_ago_in_words(@post.created_at) %> ago</p>
-<%= simple_format @post.body %>
-
-<div class="comments-holder">
-	<h2><%= @post.comments.count %> Comments</h2>
-	<%= render @post.comments %>
-
-	<h3>Add a comment:</h3>
-	<%= render "comments/form" %>
+  <footer>
+    <%= link_to 'Edit', edit_post_path(@post), class: "button" %>
+    <%= link_to 'Back', posts_path, class: "button" %>
+  </footer>
+  
 </div>
 
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
