@@ -1,3 +1,7 @@
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
 html,
 body,
 ul,
@@ -26,4 +30,10 @@ img{
 	font-family: 'Libre Baskerville', serif;
 	font-size: 22px;
 	background-color: rgba(0,0,0,0.01);
+}
+
+.wrapper{
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
 }

@@ -1,5 +1,12 @@
-<h1>New post</h1>
+<div class="post-block">
+  <h1 class="u-spacer50">New post</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
+  
+</div>
 
-<%= link_to 'Back', posts_path %>
+<footer>
+  <div class="wrapper">
+    <%= link_to 'Back', posts_path, class: "button" %>
+  </div>
+</footer>

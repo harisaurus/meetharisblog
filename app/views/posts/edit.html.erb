@@ -1,6 +1,13 @@
-<h1>Editing post</h1>
+<div class="post-block">
+  <h1 class="u-spacer50">Editing post</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+</div>
+
+<footer>
+  <div class="wrapper">
+    <%= link_to 'Show', @post, class: "button" %>
+    <%= link_to 'Back', posts_path, class: "button" %>
+  </div>
+</footer>

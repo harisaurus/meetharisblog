@@ -7,9 +7,40 @@
 	border-top: 1px solid #f2f2f2;
 	padding: 3rem;
 	transition: all 0.2s ease-in-out;
+  position: relative;
 
-	&:hover{
-		// background-color: #f9f9f9;
-    color: $primaryColor;
-	}
+  a{
+    border-bottom: none;
+    &:hover{
+      color: $primaryColor;
+    }
+  }
+
+  h2{
+    display: inline-block;
+  }
+
+	.icon-clock{
+    display: inline-block;
+    margin-right: 3px;
+    transform: translateY(1px);
+  }
+}
+
+.posts-item-actions{
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  color: $mediumGrey;
+
+  &:hover{
+    color: lighten($mediumGrey, 30%);
+  }
+
+  a{
+    margin-left: 5px;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
 }

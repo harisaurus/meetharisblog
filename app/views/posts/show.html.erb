@@ -16,8 +16,10 @@
   </div> -->
 
   <footer>
-    <%= link_to 'Edit', edit_post_path(@post), class: "button" %>
-    <%= link_to 'Back', posts_path, class: "button" %>
+    <div class="wrapper">
+      <%= link_to 'Edit', edit_post_path(@post), class: "button" %>
+      <%= link_to 'Back', posts_path, class: "button" %>
+    </div>
   </footer>
   
 </div>

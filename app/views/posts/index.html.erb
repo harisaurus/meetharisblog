@@ -21,12 +21,24 @@
   
   <div class="posts-list">
   <% @posts.each do |post| %>
-    <%= link_to post do %>
+    
     <div class="posts-list-item">
-      <p class="u-lowerEmphasis u-uppercase u-spacer24">Created <%= time_ago_in_words(post.created_at) %> ago</p>
-      <h2><%= post.title %></h2>
+      <div class="posts-item-actions">
+        <%= link_to edit_post_path(post) do %>
+          <span class="icon-compose"></span>
+        <% end %>
+
+        <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <span class="icon-close"></span>
+        <% end %>
+      </div>
+      <p class="u-lowerEmphasis u-uppercase u-spacer24">
+        <span class="icon-clock"></span>
+        <%= time_ago_in_words(post.created_at) %> ago</p>
+      <%= link_to post do %>
+        <h2><%= post.title %></h2>
+      <% end %>
     </div>
-    <% end %>
   <% end %>
   </div>
 
