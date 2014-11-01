@@ -30,6 +30,8 @@ gem 'redcarpet'
 
 gem 'pygments.rb'
 
+gem "friendly_id", "~> 5.0.1"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

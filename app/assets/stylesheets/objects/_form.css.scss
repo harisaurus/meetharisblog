@@ -27,6 +27,10 @@
     font-size: 18px;
   }
 
+  &.form--comments textarea{
+    font-family: "museo-sans",sans-serif;
+  }
+
   input[type="submit"]{
     width: 100%;
     padding: 25px;

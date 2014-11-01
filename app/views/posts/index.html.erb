@@ -20,7 +20,7 @@
   </div>
   
   <div class="posts-list">
-  <% @posts.each do |post| %>
+  <% @posts.order('created_at DESC').each do |post| %>
     
     <div class="posts-list-item">
       <div class="posts-item-actions">

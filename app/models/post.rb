@@ -8,4 +8,15 @@ class Post < ActiveRecord::Base
 	validates :title, presence: true, length: {minimum: 5}
 	validates :body, presence: true
 
+  extend FriendlyId
+
+  friendly_id :slug_candidates, use: :slugged
+
+  def slug_candidates
+    [
+      :title,
+      [:title, :id]
+    ]
+  end
+
 end
