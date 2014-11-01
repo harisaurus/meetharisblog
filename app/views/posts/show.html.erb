@@ -4,6 +4,15 @@
   <div class="post-block">
     <h3 class="u-spacer10"> Created <%= time_ago_in_words(@post.created_at) %> ago</h3 class="u-spacer10">
     <h1 class="u-spacer50 "><%= link_to_unless_current @post.title, @post %></h1>
+    
+    <% if @post.tag_list %>
+    <p>
+      <% @post.tag_list.each do |tagitem| %>
+        <span class="tag"><%= tagitem %></span>
+      <% end %>
+    </p>
+    <% end %>
+
     <div class="markdown">
       <%= markdown @post.body %>
     </div>
