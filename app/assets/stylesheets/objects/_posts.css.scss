@@ -4,6 +4,10 @@
   margin: 9em auto 5em;
   text-align: left;
 
+  @media only screen and (max-width: 520px){
+    margin: 5em auto;
+  }
+
   p,
   .highlight{
     margin-bottom: 25px;

@@ -7,15 +7,18 @@
   }
 
   input[type="text"],
+  input[type="email"],
+  input[type="password"],
   textarea{
     width: 100%;
-    // border: 1px solid darken($lightGrey, 20%);
     border: none;
     padding: 15px;
     background: #f5f5f5;
   }
 
-  input[type="text"]{
+  input[type="text"],
+  input[type="email"],
+  input[type="password"]{
     font-family: "museo-sans",sans-serif;
     font-size: 20px;
   }
@@ -42,4 +45,21 @@
       margin-bottom: 0;
     }
   }
+}
+
+.devise-page{
+  background: $lightGrey;
+  height: 100%;
+}
+
+.user-form{
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  box-shadow: 0 1px 1px 0px $mediumGrey;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }

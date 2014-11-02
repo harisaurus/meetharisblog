@@ -5,12 +5,13 @@
     <h3 class="u-spacer10"> Created <%= time_ago_in_words(@post.created_at) %> ago</h3 class="u-spacer10">
     <h1 class="u-spacer50 "><%= link_to_unless_current @post.title, @post %></h1>
     
-    <% if @post.tag_list %>
-    <p>
-      <% @post.tag_list.each do |tagitem| %>
-        <span class="tag"><%= tagitem %></span>
-      <% end %>
-    </p>
+    <% if @post.tag_list.present? %>
+      <p>
+        <span class="icon-tag"></span>
+        <% @post.tag_list.each do |tagitem| %>
+          <span class="tag"><%= tagitem %></span>
+        <% end %>
+      </p>
     <% end %>
 
     <div class="markdown">
@@ -31,7 +32,9 @@
 
   <footer>
     <div class="wrapper">
-      <%= link_to 'Edit', edit_post_path(@post), class: "button" %>
+      <% if user_signed_in? %>
+        <%= link_to 'Edit', edit_post_path(@post), class: "button" %>
+      <% end %>
       <%= link_to 'Back', posts_path, class: "button" %>
     </div>
   </footer>
