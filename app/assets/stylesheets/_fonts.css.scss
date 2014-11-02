@@ -1,13 +1,14 @@
 @font-face {
   font-family: 'icomoon';
-  src:url('fonts/icomoon.eot?-5fipxx');
-  src:url('fonts/icomoon.eot?#iefix-5fipxx') format('embedded-opentype'),
-    url('fonts/icomoon.woff?-5fipxx') format('woff'),
-    url('fonts/icomoon.ttf?-5fipxx') format('truetype'),
-    url('fonts/icomoon.svg?-5fipxx#icomoon') format('svg');
+  src:font-url('/assets/icomoon.eot?-5fipxx');
+  src:font-url('/assets/icomoon.eot?#iefix-5fipxx') format('embedded-opentype'),
+    font-url('/assets/icomoon.woff?-5fipxx') format('woff'),
+    font-url('/assets/icomoon.ttf?-5fipxx') format('truetype'),
+    font-url('/assets/icomoon.svg?-5fipxx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+
 
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
