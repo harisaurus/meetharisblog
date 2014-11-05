@@ -19,14 +19,7 @@
 @import 'initializers';
 @import 'helpers';
 
-@import 'objects/side-header';
-@import 'objects/posts-list';
-@import 'objects/posts';
-@import 'objects/buttons';
-@import 'objects/quotes';
-@import 'objects/form';
-@import 'objects/tags';
-@import 'objects/footer';
+@import "objects/*";
 
 @import 'pygments';
 

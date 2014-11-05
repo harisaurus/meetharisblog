@@ -1,0 +1,23 @@
+.right-actions{
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  text-align: right;
+  padding: 15px 20px;
+
+  @media only screen and (max-width: 768px){
+    background: rgba(white, 0.9);
+  }
+}
+
+.action-return{
+  border: none;
+  color: $mediumGrey;
+  transition: all 0.15s ease-in-out;
+  font-size: 30px;
+
+  &:hover{
+    color: $primaryColor;
+  }
+}
