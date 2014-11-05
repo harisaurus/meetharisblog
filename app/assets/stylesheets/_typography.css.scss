@@ -26,11 +26,12 @@ p{
 
 a{
 	text-decoration: none;
+	color: black;
 	border-bottom: 3px solid rgba($primaryColor,0.5);
 	transition: all 0.15s ease-in-out;
 	
 	&:hover{
-		border-color: $primaryColor;
+		border-color: rgba($primaryColor,0.8);
 	}
 }
 
@@ -45,7 +46,7 @@ a{
 		height: 4px;
 		top: 50%;
 		background-color: $primaryColor;
-		opacity: 0.5;
+		opacity: 0.8;
 
 	}
 }
