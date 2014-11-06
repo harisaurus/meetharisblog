@@ -14,9 +14,14 @@
   }
 
   h2{
-    margin: 60px 0 25px;
+    margin: 60px 0 10px;
     font-weight: bold;
-    color: $primaryColor;
+    font-size: 30px;
+  }
+
+  h3{
+    color: $mediumGrey;
+    font-size: 14px;
   }
 
   img{

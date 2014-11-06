@@ -6,6 +6,10 @@ html, body{
   height: 100%;
 }
 
+::selection {
+  // background: #D6EDFF;
+}
+
 html,
 body,
 ul,

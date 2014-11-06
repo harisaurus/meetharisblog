@@ -8,8 +8,8 @@
   <p id="notice"><%= notice %></p>
   
   <div class="post-block">
-    <h3 class="u-spacer10"> Created <%= time_ago_in_words(@post.created_at) %> ago</h3 class="u-spacer10">
-    <h1 class="u-spacer50 "><%= link_to_unless_current @post.title, @post %></h1>
+    <h1 class="u-spacer10 "><%= link_to_unless_current @post.title, @post %></h1>
+    <h3 class="u-spacer50"> Created <%= time_ago_in_words(@post.created_at) %> ago</h3 class="u-spacer10">
     
     <% if @post.tag_list.present? %>
       <p>
