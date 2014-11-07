@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  initOverlay();
+});
+
+function initOverlay(){
+  $('.js-toggleOverlay').on('click', function(e){
+      e.preventDefault();
+      $('.overlay').toggleClass('active');
+  });
+}
