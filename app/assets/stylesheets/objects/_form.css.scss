@@ -3,7 +3,7 @@
     font-family: "museo-sans",sans-serif;
     font-size: 24px;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   input[type="text"],
@@ -37,6 +37,7 @@
   input[type="submit"]{
     width: 100%;
     padding: 25px;
+    cursor: pointer;
   }
 
   .field{
@@ -48,18 +49,24 @@
 }
 
 .devise-page{
-  background: $lightGrey;
+  background: white;
   height: 100%;
 }
 
 .user-form{
-  background: white;
   width: 90%;
   max-width: 500px;
   padding: 30px;
-  box-shadow: 0 1px 1px 0px $mediumGrey;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translateY(-50%) translateX(-50%);
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea{
+    box-shadow: 0 3px 0 darken($lightGrey, 10%);
+  }
+
 }

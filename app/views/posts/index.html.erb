@@ -2,16 +2,7 @@
 
 <div class="header-aside">
   <h1>Meet Haris</h1>
-  <svg version="1.1" id="hmbranding-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   viewBox="0 0 900 900" enable-background="new 0 0 900 900" xml:space="preserve">
-    <polyline class="hm-svg" stroke-miterlimit="10" points="15.5,207.9 15.5,424.5 335.5,424.5 
-      335.5,207.9 "/>
-    <polyline class="hm-svg" stroke-miterlimit="10" points="15.5,699.8 15.5,487 335.5,487 
-      335.5,699.8 "/>
-    <polyline class="hm-svg" stroke-miterlimit="10" points="400.1,699.8 400.1,316.2 675.7,699.8 "/>
-    <line class="hm-svg" stroke-miterlimit="10" x1="400.1" y1="207.9" x2="754.5" y2="699.8"/>
-    <polyline class="hm-svg" stroke-miterlimit="10" points="885.3,699.8 885.3,207.9 643.5,545.7 "/>
-  </svg>
+  <%= render 'layouts/svg' %>
 </div>
 
 
@@ -53,14 +44,7 @@
   <% end %>
   </div>
 
-  <footer>
-    <% if user_signed_in? %>
-      <%= link_to 'New Post', new_post_path, class: "button" %>
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "button" %> 
-    <% else %>
-      <%= link_to "Sign In", new_user_session_path, class: "button" %>
-    <% end %>
-  </footer>
+  <%= render 'layouts/footer' %>
 </div>
 
 

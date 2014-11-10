@@ -2,4 +2,15 @@ footer{
   padding: 1.5rem 0;
   text-align: center;
   background: $lightGrey;
+
+  a{
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+  }
+}
+
+p.footer{
+  font-family: "museo-sans",sans-serif;
+  font-size: 11px;
+  color: $mediumGrey;
 }

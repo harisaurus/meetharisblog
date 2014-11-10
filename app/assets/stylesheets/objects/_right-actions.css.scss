@@ -11,9 +11,9 @@
   }
 }
 
-.action-return{
+.action-item{
   border: none;
-  color: $mediumGrey;
+  color: darken($lightGrey, 20%);
   transition: all 0.15s ease-in-out;
   font-size: 30px;
 

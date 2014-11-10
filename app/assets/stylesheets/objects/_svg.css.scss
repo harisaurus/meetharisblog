@@ -1,0 +1,62 @@
+#hmbranding-svg{
+  
+  .branding &{
+    width: 60px;
+    position: fixed;
+    top: 5px;
+    left: 20px;
+    z-index: 2;
+  }
+
+  .header-aside &{
+    position: absolute;
+    width: 40%;
+    max-width: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.hm-svg{
+  fill: none;
+  stroke-width: 15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1000;
+
+  .branding &{
+    stroke: $primaryColor;
+    stroke-width: 30;
+  }
+
+  .header-aside &{
+    stroke: #fff;
+    stroke-opacity: 0;
+    stroke-dashoffset: 1000;
+    animation: dash 2.5s ease-in forwards;
+    -moz-animation: dash 2.5s ease-in forwards;
+    -webkit-animation: dash 2.5s ease-in forwards;
+  }
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@-moz-keyframes dash {
+  to {
+    stroke-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}

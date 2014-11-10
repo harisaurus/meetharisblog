@@ -1,5 +1,15 @@
+<div class="branding">
+  <%= render 'layouts/svg' %>
+</div>
+
 <div class="right-actions">
-  <%= link_to posts_path, class: "action-return" do %>
+  <% if user_signed_in? %>
+    <%= link_to edit_post_path(@post), class: "action-item" do %>
+      <span class="icon-compose"></span>
+    <% end %>
+  <% end %>
+
+  <%= link_to posts_path, class: "action-item" do %>
     <span class="icon-close"></span>
   <% end %>
 </div>
@@ -35,14 +45,6 @@
     </div>
   </div> -->
 
-
-  <footer>
-    <div class="wrapper">
-      <% if user_signed_in? %>
-        <%= link_to 'Edit', edit_post_path(@post), class: "button" %>
-      <% end %>
-      <%= link_to 'Back', posts_path, class: "button" %>
-    </div>
-  </footer>
+  <%= render 'layouts/footer' %>
   
 </div>
