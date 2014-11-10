@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   root "posts#index"
 
+  get "/" => "posts#index"
+
   devise_scope :user do
     get "/login" => "devise/sessions#new"
     delete "/logout" => "devise/sessions#destroy"
