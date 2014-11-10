@@ -13,10 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require konami
 //= require_tree .
+
+
 
 $(document).ready(function(){
   initOverlay();
+
+  var easter_egg = new Konami(function() { alert('Konami code!')});
+  easter_egg.load();
+
 });
 
 function initOverlay(){
