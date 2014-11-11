@@ -1,50 +1,65 @@
-<div class="branding">
+<div class="header-aside header-aside--show animated fadeIn">
+  <%= link_to posts_path, class: "show-return button button--inverted u-spacer24" do %>
+    Return to Home
+  <% end %>
+  <h1 class="show-title"><%= link_to_unless_current @post.title, @post %></h1>
   <%= render 'layouts/svg' %>
 </div>
 
-<div class="right-actions">
+<div class="site-content animated fadeIn">
+  <!-- ADMIN TOOLBELT
+  ========================= -->
   <% if user_signed_in? %>
-    <%= link_to edit_post_path(@post), class: "action-item" do %>
-      <span class="icon-compose"></span>
-    <% end %>
+    <div class="admin-toolbelt">
+    <%= link_to 'Edit Post', edit_post_path(@post), class: "button" %>
+    <%= link_to 'New Post', new_post_path, class: "button" %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "button" %> 
+    </div>
   <% end %>
 
-  <%= link_to posts_path, class: "action-item" do %>
-    <span class="icon-close"></span>
-  <% end %>
-</div>
-
-<div class="show-post scene_element scene_element--fadeinup">
+  <!-- RAILS NOTICES
+  ========================= -->
+  <% if notice %>
   <p id="notice"><%= notice %></p>
-  
-  <div class="post-block">
-    <h1 class="u-spacer10 "><%= link_to_unless_current @post.title, @post %></h1>
-    <h3 class="u-spacer50"> Created <%= time_ago_in_words(@post.created_at) %> ago</h3 class="u-spacer10">
+  <% end %>
+
+  <div class="show-post">
     
-    <% if @post.tag_list.present? %>
-      <p>
-        <span class="icon-tag"></span>
-        <% @post.tag_list.each do |tagitem| %>
-          <span class="tag"><%= tagitem %></span>
-        <% end %>
-      </p>
-    <% end %>
+    <div class="post-block">
 
-    <div class="markdown">
-      <%= markdown @post.body %>
+      <!-- TAG LIST
+      ========================= -->
+      <% if @post.tag_list.present? %>
+        <p>
+          <span class="icon-tag"></span>
+          <% @post.tag_list.each do |tagitem| %>
+            <span class="tag"><%= tagitem %></span>
+          <% end %>
+        </p>
+      <% end %>
+      
+      <!-- MARKDOWN
+      ========================= -->
+      <div class="markdown">
+        <%= markdown @post.body %>
+      </div>
+      
+      <!-- TIMESTAMP
+      ========================= -->
+      <p class="show-stamp"> Created <%= time_ago_in_words(@post.created_at) %> ago</p>
     </div>
+
+    <!-- <div class="post-block">
+      <div class="comments-holder">
+        <h2><%= @post.comments.count %> Comments</h2>
+        <%= render @post.comments %>
+
+        <h3>Add a comment:</h3>
+        <%= render "comments/form" %>
+      </div>
+    </div> -->
+
+    <%= render 'layouts/footer' %>
+    
   </div>
-
-  <!-- <div class="post-block">
-    <div class="comments-holder">
-    	<h2><%= @post.comments.count %> Comments</h2>
-    	<%= render @post.comments %>
-
-    	<h3>Add a comment:</h3>
-    	<%= render "comments/form" %>
-    </div>
-  </div> -->
-
-  <%= render 'layouts/footer' %>
-  
 </div>

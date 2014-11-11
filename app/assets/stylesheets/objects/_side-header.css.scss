@@ -21,7 +21,7 @@
     height: 100%;
   }
 
-  h1{
+  h1.sitetitle{
     position: absolute;
     left: -3000px;
     opacity: 0;
@@ -29,3 +29,17 @@
 
 }
 
+.header-aside--show{
+  padding: 130px 40px 0;
+  font-family: "museo-sans",sans-serif;
+}
+
+.show-title{
+  color: white;
+}
+
+.show-stamp{
+  color: black;
+  font-size: 14px;
+  opacity: 0.4;
+}

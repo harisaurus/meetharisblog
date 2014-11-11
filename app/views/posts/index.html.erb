@@ -1,12 +1,19 @@
 <!-- <a class="navigation js-toggleOverlay" href="#">Portfolio</a> -->
 
-<div class="header-aside">
-  <h1>Meet Haris</h1>
+<div class="header-aside header-aside--home animated fadeIn">
+  <h1 class="sitetitle">Meet Haris</h1>
   <%= render 'layouts/svg' %>
 </div>
 
 
-<div class="home-content">
+<div class="site-content animated fadeIn">
+
+  <% if user_signed_in? %>
+    <div class="admin-toolbelt">
+    <%= link_to 'New Post', new_post_path, class: "button" %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "button" %> 
+    </div>
+  <% end %>
   
   <div class="home-intro center-block">
     <p class="u-spacer24">Hello, my name is Haris Mahmood. I'm a web designer + developer based in Toronto. I spend the majority of my time creating awesome applications and user interfaces that function and look incredibly well.</p> 
@@ -16,6 +23,7 @@
       <a class="social-icon" href="http://ca.linkedin.com/pub/haris-mahmood/50/b66/1b0/"><span class="icon-linkedin"></span></a>
     </div>
   </div>
+
 
   <div class="posts-list">
   <% @posts.order('created_at DESC').each do |post| %>
