@@ -1,12 +1,7 @@
 <footer>
-  <% if user_signed_in? %>
-    <%= link_to 'New Post', new_post_path, class: "button" %>
-    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "button" %> 
-  <% else %>
-    <div class="grid">
+  <div class="grid">
       <div class="grid__item two-thirds">
         <p class="footer">Design + Dev by Haris Mahmood &#8226; Developed in Ruby on Rails &#8226; Icons by <a href="http://www.icomoon.com">icomoon</a></p>
       </div>
     </div>
-  <% end %>
 </footer>

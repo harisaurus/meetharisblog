@@ -1,14 +1,14 @@
 #hmbranding-svg{
   
-  .branding &{
+  .header-aside--show &{
     width: 60px;
     position: fixed;
-    top: 5px;
-    left: 20px;
+    top: 10px;
+    left: 40px;
     z-index: 2;
   }
 
-  .header-aside &{
+  .header-aside--home &{
     position: absolute;
     width: 40%;
     max-width: 300px;
@@ -25,12 +25,12 @@
   stroke-linejoin: round;
   stroke-dasharray: 1000;
 
-  .branding &{
-    stroke: $primaryColor;
+  .header-aside--show &{
+    stroke: white;
     stroke-width: 30;
   }
 
-  .header-aside &{
+  .header-aside--home &{
     stroke: #fff;
     stroke-opacity: 0;
     stroke-dashoffset: 1000;
