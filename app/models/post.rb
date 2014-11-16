@@ -20,4 +20,16 @@ class Post < ActiveRecord::Base
   # acts_as_taggable_on integration
   acts_as_taggable_on :tags
 
+  # next/prev
+  scope :next, lambda {|id| where("id > ?",id).order("id ASC") }
+  scope :previous, lambda {|id| where("id < ?",id).order("id DESC") }
+
+  def next
+    Post.next(self.id).first
+  end
+
+  def previous
+    Post.previous(self.id).first
+  end
+
 end

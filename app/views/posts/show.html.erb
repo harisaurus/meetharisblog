@@ -1,9 +1,26 @@
 <div class="header-aside header-aside--show animated fadeIn">
+  <%= render 'layouts/svg' %>
   <%= link_to posts_path, class: "show-return button button--inverted u-spacer24" do %>
     Return to Home
   <% end %>
   <h1 class="show-title"><%= link_to_unless_current @post.title, @post %></h1>
-  <%= render 'layouts/svg' %>
+
+  <% prevpost = @post.previous
+  if prevpost.present? %>
+    <%= link_to post_path(prevpost) do %>
+      <span>Previous Post</span><br>
+      <span><%= prevpost.title %></span><br>
+    <% end %>
+  <% end %>
+
+  <% nextpost = @post.next
+  if nextpost.present? %>
+    <%= link_to post_path(nextpost) do %>
+      <span>Previous Post</span><br>
+      <span><%= nextpost.title %></span><br>
+    <% end %>
+  <% end %>
+
 </div>
 
 <div class="site-content animated fadeIn">
