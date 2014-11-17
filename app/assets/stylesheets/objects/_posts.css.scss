@@ -31,13 +31,13 @@
   blockquote{
     margin: 0 0 25px 0;
     padding: 30px;
-    background: $secondaryColor;
+    background: $darkGrey;
     font-style: italic;
 
     p{
       margin: 0;
       font-size: 26px;
-      color: #5e5e5e;
+      color: $mediumGrey;
 
       em{
         display: block;
