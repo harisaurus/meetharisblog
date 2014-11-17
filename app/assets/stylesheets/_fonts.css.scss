@@ -27,12 +27,6 @@
 .icon-tag:before {
   content: "\e600";
 }
-.icon-close:before {
-  content: "\e601";
-}
-.icon-envelope:before {
-  content: "\e602";
-}
 .icon-compose:before {
   content: "\e603";
 }
@@ -42,18 +36,15 @@
 .icon-clock:before {
   content: "\e605";
 }
-.icon-comments:before {
-  content: "\e606";
-}
-.icon-list:before {
-  content: "\e607";
-}
 .icon-twitter:before {
   content: "\e608";
 }
-.icon-facebook:before {
-  content: "\e609";
-}
 .icon-linkedin:before {
   content: "\e60a";
+}
+.icon-arrow-left:before {
+  content: "\e601";
+}
+.icon-arrow-right:before {
+  content: "\e602";
 }

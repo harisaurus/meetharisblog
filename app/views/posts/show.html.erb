@@ -4,22 +4,30 @@
     Return to Home
   <% end %>
   <h1 class="show-title"><%= link_to_unless_current @post.title, @post %></h1>
+  
+  <div class="prev-and-next">
+    <div class="grid grid--flush">
+      <div class="grid__item one-half">
+        <% prevpost = @post.previous
+        if prevpost.present? %>
+          <%= link_to post_path(prevpost), class: "prev-and-next-link u-alignCenter" do %>
+            <span class="icon icon-arrow-left"></span>
+            <span>Previous</span>
+          <% end %>
+        <% end %>
+      </div>
 
-  <% prevpost = @post.previous
-  if prevpost.present? %>
-    <%= link_to post_path(prevpost) do %>
-      <span>Previous Post</span><br>
-      <span><%= prevpost.title %></span><br>
-    <% end %>
-  <% end %>
-
-  <% nextpost = @post.next
-  if nextpost.present? %>
-    <%= link_to post_path(nextpost) do %>
-      <span>Previous Post</span><br>
-      <span><%= nextpost.title %></span><br>
-    <% end %>
-  <% end %>
+      <div class="grid__item one-half">
+        <% nextpost = @post.next
+        if nextpost.present? %>
+          <%= link_to post_path(nextpost), class: "prev-and-next-link u-alignCenter" do %>
+            <span>Next</span>
+            <span class="icon icon-arrow-right"></span>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
 </div>
 

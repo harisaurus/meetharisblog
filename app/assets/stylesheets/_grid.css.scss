@@ -35,6 +35,9 @@
 .grid--wide { margin-left: -100px; }
 .grid--wide > .grid__item { padding-left: 100px; }
 
+.grid--flush{ margin-left: 0; }
+.grid--flush > .grid__item { padding-left: 0; }
+
 /*------------------------------------*\ $WIDTHS
 \*------------------------------------*/
 /** Create our width classes, prefixed by the specified namespace. */
