@@ -10,6 +10,12 @@
       position: absolute;
     }
 
+    path,
+    line,
+    polyline{
+      stroke-width: 25px;
+    }
+
   }
 
   .header-aside--home &{
@@ -20,47 +26,15 @@
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
   }
-}
 
-.hm-svg{
-  fill: none;
-  stroke-width: 15;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1000;
-
-  .header-aside--show &{
+  path,
+  line,
+  polyline{
     stroke: white;
-    stroke-width: 30;
+    stroke-width: 10px;
+    fill: transparent;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
-  .header-aside--home &{
-    stroke: #fff;
-    stroke-opacity: 0;
-    stroke-dashoffset: 1000;
-    animation: dash 2.5s ease-in forwards;
-    -moz-animation: dash 2.5s ease-in forwards;
-    -webkit-animation: dash 2.5s ease-in forwards;
-  }
-}
-
-@-webkit-keyframes dash {
-  to {
-    stroke-opacity: 1;
-    stroke-dashoffset: 0;
-  }
-}
-
-@-moz-keyframes dash {
-  to {
-    stroke-opacity: 1;
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes dash {
-  to {
-    stroke-opacity: 1;
-    stroke-dashoffset: 0;
-  }
 }
