@@ -32,4 +32,7 @@ class Post < ActiveRecord::Base
     Post.previous(self.id).first
   end
 
+  # disqus setup
+  DISQUS_SHORTNAME = Rails.env == "development" ? "meetharisdev".freeze : "meetharis".freeze
+
 end

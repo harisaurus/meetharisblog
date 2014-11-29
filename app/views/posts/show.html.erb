@@ -55,9 +55,6 @@ title @post.title
   <div class="show-post">
     
     <div class="post-block">
-
-      <!-- TAG LIST
-      ========================= -->
       <% if @post.tag_list.present? %>
         <p>
           <span class="icon-tag"></span>
@@ -66,27 +63,13 @@ title @post.title
           <% end %>
         </p>
       <% end %>
-      
-      <!-- MARKDOWN
-      ========================= -->
-      <div class="markdown">
-        <%= markdown @post.body %>
-      </div>
-      
-      <!-- TIMESTAMP
-      ========================= -->
       <p class="show-stamp"> Created <%= time_ago_in_words(@post.created_at) %> ago</p>
+      
+      <div class="markdown"> <%= markdown @post.body %> </div>
+      <div class="u-spacer150"></div>
+      <%= render 'disqus/thread', post: @post %>
+
     </div>
-
-    <!-- <div class="post-block">
-      <div class="comments-holder">
-        <h2><%= @post.comments.count %> Comments</h2>
-        <%= render @post.comments %>
-
-        <h3>Add a comment:</h3>
-        <%= render "comments/form" %>
-      </div>
-    </div> -->
 
     <%= render 'layouts/footer' %>
     
