@@ -2,8 +2,6 @@
 meta title: "Home"
 %>
 
-<!-- <a class="navigation js-toggleOverlay" href="#">Portfolio</a> -->
-
 <div class="header-aside header-aside--home animated fadeIn">
   <h1 class="sitetitle">Meet Haris</h1>
   <%= render 'layouts/svg' %>
@@ -25,6 +23,7 @@ meta title: "Home"
     <div class="social">
       <a class="social-icon" href="http://www.twitter.com/harismahmood89"><span class="icon-twitter"></span></a>
       <a class="social-icon" href="http://ca.linkedin.com/pub/haris-mahmood/50/b66/1b0/"><span class="icon-linkedin"></span></a>
+      <!-- <a class="js-toggleOverlay" href="#">Contact</a> -->
     </div>
   </div>
 
@@ -62,8 +61,15 @@ meta title: "Home"
 
 
 <div class="overlay">
-  <div class="portfolio-items">
-    
+  <a class="js-toggleOverlay" href="#">Close</a>
+  <div class="contact-container">
+    <h2>Connect</h2>
+    <form action="//forms.brace.io/hello@meetharis.com">
+        <input class="" type="text" name="name">
+        <input class="" type="email" name="_replyto">
+        <input class="" type="submit" value="Send">
+        <textarea class="" name="comment" cols="30" rows="10"></textarea>
+    </form>
   </div>
 </div>
 
