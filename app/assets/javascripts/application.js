@@ -22,6 +22,16 @@ $(document).ready(function(){
   var easter_egg = new Konami(function() { alert('Konami code!')});
   easter_egg.load();
 
+  var svg = new Walkway({ 
+      selector: '#hmbranding-svg',
+      duration: '3000',
+      easing: 'easeOutSine'
+    });
+  
+  $('#hmbranding-svg').css('opacity', '1');
+  var thesvg = $('#hmbranding-svg');
+  svg.draw();
+
 });
 
 function initOverlay(){
